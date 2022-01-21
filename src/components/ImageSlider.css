@@ -1,0 +1,102 @@
+.slider-box{
+
+width: 950px;
+height: 400px;
+left: 0px;
+top: 0px;
+
+background: rgba(255, 248, 248, 0.01);
+box-shadow: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5), inset 0px 7px 11px -4px #FFFFFF, inset 0px -82px 68px -64px rgba(96, 68, 144, 0.3), inset 0px 98px 100px -48px rgba(202, 172, 255, 0.3), inset 0px 4px 18px rgba(154, 146, 210, 0.3), inset 0px 1px 0px #8DF1FF;
+backdrop-filter: blur(100px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 50px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.slider-container{
+    margin-left:12%;
+    
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+}
+
+.slider-box{
+    display: flex;
+       align-items: center;
+    justify-content: space-between;
+}
+
+.slider-context{
+    /* padding: 20px; */
+    padding-left: 50px;
+    padding-top: 20px;
+    width: 500px;
+    color: #fff !important;
+
+    /* align-items: center;
+    justify-content: space-between; */
+}
+
+.slider-main-context{
+    /* Track Student Progress */
+
+    /* margin-top: 50px; */
+
+width: 100%;
+height: 100px;
+/* left: 54px;
+top: 93px; */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 50px;
+line-height: 70px;
+/* or 140% */
+letter-spacing: 0.05em;
+
+
+
+
+}
+
+.slider-sub-context{
+    /* Efficiently track academic & co-curricular progress, record daily attendance, and provide announcements in real time. */
+
+    margin-top: 70px;
+
+width: 716px;
+height: 135px;
+
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 33px;
+letter-spacing: 0.01em;
+
+color: #fff;
+
+
+}
+
+.slider-image1{
+  width: 80%;
+ height: auto; 
+
+}
+
+.slider-image{
+    padding-right: 30px;
+}
+
+
