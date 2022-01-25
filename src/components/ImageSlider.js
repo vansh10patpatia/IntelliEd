@@ -8,6 +8,8 @@ import sliderImage4 from "../images/sliderImage_4.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Row, Container, Col } from "react-bootstrap";
+
 
 function ImageSlider(props) {
 
@@ -22,94 +24,65 @@ function ImageSlider(props) {
         arrows: false,
     };
 
+    const sliderDetails = [
+        {
+            heading:'Track Student Progress',
+            subHeading: 'Efficiently track academic & co-curricular  progress, record daily attendance, and provide  announcements in real time.',
+            image:sliderImage1
+        },
+        {
+            heading:'Automated Reports ',
+            subHeading: 'Convert raw data points into actionable  insights without any manual effort.',
+            image:sliderImage2
+        },
+        {
+            heading:'Early Warning System ( EWS )',
+            subHeading: 'Get notified in real-time whenever a  student seems to be struggling.',
+            image:sliderImage3
+        },
+        {
+            heading:'Social Emotional Learning',
+            subHeading: 'Understand the SEL progress as well  as improve classroom behaviour  and overall well-being of your students.',
+            image:sliderImage4
+        }
+    ]
+
+    function renderSlider(item,key) {
+        console.log(item,key);
+        var imageClass = 'slider-image'+key;
+        return(<Container>
+            <Row className='slider-box'>
+                <Col md={6}>
+                    <div className='slider-context'>
+                        <div className='slider-main-context' >{item.heading}</div>
+                        <div className='slider-sub-context' dangerouslySetInnerHTML={{ __html: item.subHeading }} ></div>
+                    </div>
+                </Col>
+                <Col md={{ span: 5, offset: 1 }}>
+                    <div className='slider-image-container'>
+                        <img src={item.image} className={imageClass} />
+                    </div>
+                </Col>
+            </Row>
+        </Container>)
+    }
+
     return (
-        <div className="slider-container">
-
-        <Slider {...settings}>
-
-            {/* part 1 */}
-                <div className='slider'>
-                    <div className='slider-box'>
-                        <div className='slider-context'>
-                            <div className='slider-main-context'>Track Student <br /> Progress</div>
-                            <div className='slider-sub-context'>Efficiently track academic & co-curricular <br />
-                                progress, record daily attendance, and provide
-                                <br /> announcements in real time.</div>
-                        </div>
-                        <div className='slider-image'>
-                            <img src={sliderImage1} className='slider-image1' />
-                        </div>
-                    </div>
-                </div>
-
-
-                {/* part 2 */}
-                <div className='slider'>
-                    <div className='slider-box'>
-                        <div className='slider-context'>
-                            <div className='slider-main-context'>Automated <br />Reports</div>
-                            <div className='slider-sub-context'>Convert raw data points into actionable <br />
-    insights without any manual effort.</div>
-                        </div>
-                        <div className='slider-image'>
-                            <img src={sliderImage2} className='slider-image1' />
-                        </div>
-                    </div>
-                </div>
-
-                {/* part 3 */}
-                <div className='slider'>
-                    <div className='slider-box'>
-                        <div className='slider-context'>
-                            <div className='slider-main-context'>Early Warning System ( EWS )</div>
-                            <div className='slider-sub-context'>Get notified in real-time whenever a<br />
-                                student seems to be struggling.</div>
-                        </div>
-                        <div className='slider-image'>
-                            <img src={sliderImage3} className='slider-image1' />
-                        </div>
-                    </div>
-                </div>
-
-    {/* part 4 */}
-                <div className='slider'>
-                    <div className='slider-box'>
-                        <div className='slider-context'>
-                            <div className='slider-main-context' style={{fontSize:45}}>Social Emotional Learning</div>
-                            <div className='slider-sub-context'>Understand the SEL progress as well <br />
-    as improve classroom behaviour <br />
-    and overall well-being of your students.</div>
-                        </div>
-                        <div className='slider-image'>
-                            <img src={sliderImage4} className='slider-image1' />
-                        </div>
-                    </div>
-                </div>
-
-        </Slider>
-        </div>
-
-
+        <Container className="slider-container">
+            <Row>
+                <Col md={{ span: 9, offset: 1 }}>
+                        <Slider {...settings}>
+                            {sliderDetails.map((item,key) => renderSlider(item,key))}
+                            {/* {renderSlider(0)}
+                            {renderSlider(1)}
+                            {renderSlider(2)}
+                            {renderSlider(3)} */}
+                        </Slider>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
 export default ImageSlider;
 
-
-{/* <div className='slider-box'>
-
-                <div className='slider-context'>
-
-                <div className='slider-main-context'>Track Student <br /> Progress</div>
-
-                <div className='slider-sub-context'>Efficiently track academic & co-curricular <br />
-                    progress, record daily attendance, and provide 
-                    <br /> announcements in real time.</div>
-
-                </div>
-
-                <div className='slider-image'>
-                    <img src={sliderImage1}  className='slider-image1'/>
-                </div>
-
-            </div> */}

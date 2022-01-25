@@ -11,7 +11,11 @@ function Work(props) {
     return (
         <div className='work'>
             
-            <div className='work-heading'>How it Works</div>
+            <div className='work-heading'>
+                <div className='work-lining'></div>&emsp;
+                    How it Works
+                &emsp;<div className='work-lining'></div>
+            </div>
 
             <div className='work-image'>
                 <img src={medal} className='medal-logo'/>

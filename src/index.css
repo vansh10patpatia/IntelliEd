@@ -7,14 +7,20 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/public/bg.svg');
+  /* background-image: url('/public/bg.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   /* background-position: center; */
   /* background-size: 100% 100%; */
   /* padding-top:-5% */
 }
 
+
+.headContainer{
+  background-image: url('/public/bg1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 code {
@@ -25,7 +31,10 @@ code {
 
 .downContainer{
 
-  margin-top: 17%;
+  background-image: url('/public/bg2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-top: 17%; */
 }
 
 *{

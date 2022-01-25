@@ -6,10 +6,10 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 3rem;
     line-height: 60px;
     letter-spacing: 0.09em;
-    
+    margin-bottom: 5%;
     color: #365FCD;
   margin-top: 100px;
   /* margin-bottom: 50px; */
@@ -74,4 +74,21 @@ text-align: center;
 letter-spacing: 0.02em;
 
 margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .feature-heading{
+        margin-top:10%;
+        font-size: 2.2rem;
+    }
+    .feature-lining{
+
+        background-color: #365FCD;
+        width: 125px;
+        height: 10px;
+        border-radius: 10px;
+        margin-left: 2px;
+        margin-right: 6px;
+    }
+    
 }

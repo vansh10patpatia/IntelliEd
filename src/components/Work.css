@@ -4,10 +4,10 @@
     justify-content: center;
 
     font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 60px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 60px;
 /* identical to box height */
 
 letter-spacing: 0.09em;
@@ -60,4 +60,74 @@ margin-bottom: 100px;
     left: 140px;
 
 
+}
+.work-lining{
+
+    background-color: #365FCD;
+    width: 215px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .work-heading{
+        font-size:1.5rem
+    }
+
+    .work-lining{
+
+        background-color: #365FCD;
+        width: 4rem;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .medal-logo{
+        position:relative;
+        bottom: 80px;
+        z-index: 10;
+        width:15vw
+    }
+
+    .work-image{
+        margin-left: 10%;
+    }
+    .work-youtube{
+        /* position: relative; */
+        /* right:45px */
+        width: 95vw
+    }
+
+    .youtube-logo{
+        position: absolute;
+        top: 40%;
+        left:40%;
+        text-align: center;
+        font-size: 18px;
+        width:10vw
+    
+    }
+
+
+    
+    .female-logo{
+        position: absolute;
+        top: 170px;
+        width:40vw;
+        left: -30px;
+
+        /* display: none; */
+    
+    }
+    .male-logo{
+        position: absolute;
+        top: 30vw;
+        /* left:50vw; */
+        right:-10vw;
+        width:30vw;
+
+        /* display: none; */
+    
+    
+    }
 }
